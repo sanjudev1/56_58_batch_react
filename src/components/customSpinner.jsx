@@ -1,7 +1,12 @@
+import React from 'react'
 import { DNA } from 'react-loader-spinner'
 
-export function CustomSpinner() {
-  return (
+export class CustomSpinner extends React.Component {
+  componentWillUnmount(){
+   console.log("spinner is expired")
+  }
+  render(){
+    return (
     <DNA
 visible={true}
 height="80"
@@ -11,4 +16,5 @@ wrapperStyle={{}}
 wrapperClass="dna-wrapper"
 />
   )
+  }
 }
